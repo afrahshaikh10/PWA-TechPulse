@@ -1,101 +1,102 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #eef2f7;
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1100px;
   margin: auto;
   padding: 20px;
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 20px;
-}
-
-.controls {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-select, button {
-  padding: 10px 14px;
-  border-radius: 8px;
-  border: none;
-  font-size: 14px;
-}
-
-select {
-  background: white;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-button {
-  background: #2563eb;
   color: white;
-  cursor: pointer;
+  margin-bottom: 20px;
 }
 
-button:hover {
-  background: #1d4ed8;
+.refresh-btn {
+  display: block;
+  margin: 0 auto 20px auto;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ffcc00;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.refresh-btn:hover {
+  background: #ffdb4d;
 }
 
 .loading {
   text-align: center;
+  color: white;
   font-size: 18px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .card {
   background: white;
-  display: flex;
-  gap: 15px;
   padding: 15px;
-  margin-bottom: 18px;
   border-radius: 12px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
 }
 
-.card img {
-  width: 160px;
-  height: 110px;
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.news-img {
+  width: 100%;
+  height: 180px;
   object-fit: cover;
   border-radius: 10px;
-}
-
-.card-content {
-  flex: 1;
+  margin-bottom: 10px;
 }
 
 .card h3 {
-  margin: 0 0 8px;
+  margin: 10px 0;
 }
 
 .card p {
-  margin: 0 0 10px;
-  color: #555;
+  font-size: 14px;
+  color: #444;
 }
 
 .card a {
   text-decoration: none;
-  color: #2563eb;
+  font-weight: bold;
+  color: #667eea;
+}
+.category-bar {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.cat-btn {
+  margin: 5px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background: white;
+  cursor: pointer;
   font-weight: bold;
 }
 
-.card a:hover {
-  text-decoration: underline;
+.cat-btn.active {
+  background: #ffcc00;
 }
 
-@media (max-width: 600px) {
-  .card {
-    flex-direction: column;
-  }
-
-  .card img {
-    width: 100%;
-    height: 180px;
-  }
+.cat-btn:hover {
+  background: #ffe066;
 }
